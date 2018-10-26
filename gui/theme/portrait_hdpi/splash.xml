@@ -12,6 +12,7 @@
 		<font name="font_l" filename="RobotoCondensed-Regular.ttf" size="52"/>
 		<image name="splashlogo" filename="splashlogo" retainaspect="1"/>
 		<image name="splashteamwin" filename="splashteamwin" retainaspect="1"/>
+        <image name="splashdoot" filename="splashdoot" retainaspect="1"/>
 	</resources>
 
 	<variables>
@@ -24,7 +25,10 @@
 
 	<pages>
 		<page name="splash">
-			<background color="%background_color%"/>
+			<image>
+				<image resource="splashdoot"/>
+				<placement x="0" y="0" w="%screen_width%" h="%screen_height%"/>
+			</image>
 
 			<fill color="%header_color%">
 				<placement x="0" y="0" w="%screen_width%" h="456"/>
@@ -43,7 +47,7 @@
 			<text color="%header_color%">
 				<font resource="font_l"/>
 				<placement x="540" y="1590" placement="5"/>
-				<text>Recovery Project %tw_version%</text>
+				<text>(ultra spooked) Recovery Project %tw_version%</text>
 			</text>
 		</page>
 	</pages>
