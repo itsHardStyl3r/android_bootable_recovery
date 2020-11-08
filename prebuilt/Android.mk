@@ -466,24 +466,6 @@ ifeq ($(TW_USE_TOOLBOX), true)
    include $(BUILD_PREBUILT)
 endif
 
-#TWRP App "placeholder"
-include $(CLEAR_VARS)
-LOCAL_MODULE := me.twrp.twrpapp.apk
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := RECOVERY_EXECUTABLES
-LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/system/bin
-LOCAL_SRC_FILES := $(LOCAL_MODULE)
-include $(BUILD_PREBUILT)
-
-#TWRP App permissions for Android 9+
-include $(CLEAR_VARS)
-LOCAL_MODULE := privapp-permissions-twrpapp.xml
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := RECOVERY_EXECUTABLES
-LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/system/bin
-LOCAL_SRC_FILES := $(LOCAL_MODULE)
-include $(BUILD_PREBUILT)
-
 ifeq ($(TW_INCLUDE_CRYPTO), true)
     ifneq ($(TW_CRYPTO_USE_SYSTEM_VOLD),)
         # Prebuilt vdc_pie for pre-Pie SDK Platforms
@@ -505,3 +487,4 @@ ifneq (,$(filter $(TW_INCLUDE_REPACKTOOLS) $(TW_INCLUDE_RESETPROP) $(TW_INCLUDE_
         $(error magiskboot prebuilts not present; exiting)
     endif
 endif
+
