@@ -5724,5 +5724,9 @@
 				<action function="page">advanced</action>
 			</action>
 		</page>
+
+		<page name="black_out">
+			<background color="#000000"/>
+		</page>
 	</pages>
 </recovery>
